@@ -46,6 +46,10 @@ img {
 
 .link {
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .list {
@@ -186,7 +190,7 @@ img {
 
 /* buttons */
 
-.but-portfolio {
+.but-portfolio{
   font-family: inherit;
   font-style: normal;
   background-color: #f5f4fa;
@@ -200,16 +204,16 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
 
-  transition-property: color, background-color, box-shadow;
+  transition-property: box-shadow, color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
-
 .but-portfolio:hover,
 .but-portfolio:focus {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   border: none;
   color: var(--text-white-color);
@@ -322,6 +326,7 @@ img {
 .services-item {
   margin-left: 30px;
   margin-top: 30px;
+  position: relative;
 }
 
 .our-team {
@@ -400,10 +405,6 @@ padding-right: 32px;
   padding-bottom: 6px;
   padding-left: 22px;
   padding-right: 22px;
-
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .but-portfolio:hover,
@@ -456,7 +457,14 @@ height: 12px
 
   .list-contact-icon{
   fill: var(--text-grey-color);
-  margin-right: 10px;}
+  margin-right: 10px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+  
 
 .list-contact .menu-item:hover .list-contact-icon,
 .list-contact .menu-item:focus .list-contact-icon
@@ -482,6 +490,7 @@ width: 270px;
 height: 120px;
 background-color: #F5F4FA;
 border-radius: 4px;
+
 }
 
 .social-list{
@@ -498,6 +507,9 @@ border-radius: 4px;
 }
 .social-icon{
   fill: #AFB1B8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link,
 .social-list-footer-link{
@@ -508,7 +520,8 @@ border-radius: 4px;
   height: 44px;
   border-radius: 50%;
 }
-.social-list-link {  background-color: #FFFFFF;
+.social-list-link {  
+  background-color: #FFFFFF;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -570,7 +583,11 @@ border-radius: 4px;
   height: 92px;
   border: 1px solid var(--clients-logo);
   border-radius: 4px;
-  fill: var(--clients-logo);}
+  fill: var(--clients-logo);
+  transition-property: fill;
+  transition-duration:  250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
   
 .clients-list-link:hover,
 .clients-list-link:focus{
@@ -666,5 +683,21 @@ cursor: pointer;
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
+}
 
+.services-item-text{
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
